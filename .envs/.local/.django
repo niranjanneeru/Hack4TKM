@@ -2,3 +2,6 @@
 # ------------------------------------------------------------------------------
 USE_DOCKER=yes
 IPYTHONDIR=/app/.ipython
+
+RAZORPAY_KEY_ID=rzp_test_cq3CXmYXo41Wmq
+RAZORPAY_KEY_SECRET=CAWdqGrIPJeMvIrW5heyKsfu

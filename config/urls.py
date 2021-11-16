@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
@@ -27,6 +28,7 @@ urlpatterns = [
                   #     "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
                   # ),
                   # Django Admin, use {% url 'admin:index' %}
+                  url(r'^_nested_admin/', include('nested_admin.urls')),
                   path(settings.ADMIN_URL, admin.site.urls),
                   # User management
                   path("users/", include("hackathon.users.urls", namespace="users")),

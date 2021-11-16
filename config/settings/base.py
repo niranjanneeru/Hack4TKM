@@ -73,6 +73,7 @@ THIRD_PARTY_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "drf_yasg",
+    "nested_admin",
 ]
 
 LOCAL_APPS = [
@@ -287,3 +288,7 @@ REST_FRAMEWORK = {
 CORS_URLS_REGEX = r"^/api/.*$"
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+RAZORPAY_KEY_ID = env("RAZORPAY_KEY_ID")
+
+RAZORPAY_KEY_SECRET = env("RAZORPAY_KEY_SECRET")

@@ -10,9 +10,19 @@ class TeamMemberSerializer(ModelSerializer):
 
 
 class RegSerializer(ModelSerializer):
+    team = TeamMemberSerializer(many=True)
+
     class Meta:
         model = Registrations
         fields = '__all__'
+
+    def create(self, validated_data):
+        team = validated_data.pop('team')
+        reg = Registrations.objects.create(**validated_data)
+        for member in team:
+            TeamMember.objects.create(**member, team=reg)
+        validated_data['team'] = team
+        return validated_data
 
 
 class TeamRegSerializer(Serializer):
@@ -20,13 +30,11 @@ class TeamRegSerializer(Serializer):
     members = TeamMemberSerializer(many=True)
 
     def create(self, validated_data):
-        team = validated_data.pop('team')
-        reg = RegSerializer(data=team)
+        print(validated_data)
+        reg = RegSerializer(data=validated_data.pop('team'))
         reg.is_valid()
-        reg = reg.save()
-        members = validated_data.pop('members')
-        for member in members:
-            t = TeamMember(**member, team=reg)
-            t.save()
-
-        return {'team': team, 'members': members}
+        reg.save()
+        mem = TeamMemberSerializer(data=validated_data.pop('members'), many=Tr)
+        print(validated_data)
+        mem.is_valid(raise_exception=True)
+        mem.save()
