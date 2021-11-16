@@ -35,11 +35,13 @@ class TeamMember(models.Model):
 
 
 class Payment(models.Model):
-    team = models.ForeignKey(Registrations, on_delete=models.CASCADE)
+    team = models.ForeignKey(Registrations, on_delete=models.CASCADE, related_name='payment')
     date = models.DateTimeField(auto_now=True)
     amount = models.FloatField()
     id = models.CharField(max_length=200, primary_key=True)
     has_paid = models.BooleanField(default=False)
+    payment_id = models.CharField(max_length=50, null=True, blank=True)
+    signature = models.CharField(max_length=500, null=True, blank=True)
 
     def __str__(self):
         return self.team.team_name

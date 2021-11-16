@@ -1,4 +1,5 @@
-from rest_framework.serializers import ModelSerializer, Serializer
+from phonenumber_field.serializerfields import PhoneNumberField
+from rest_framework.serializers import ModelSerializer, Serializer, CharField
 
 from .models import Registrations, TeamMember
 
@@ -34,7 +35,17 @@ class TeamRegSerializer(Serializer):
         reg = RegSerializer(data=validated_data.pop('team'))
         reg.is_valid()
         reg.save()
-        mem = TeamMemberSerializer(data=validated_data.pop('members'), many=Tr)
+        mem = TeamMemberSerializer(data=validated_data.pop('members'), many=True)
         print(validated_data)
         mem.is_valid(raise_exception=True)
         mem.save()
+
+
+class MobileSerializer(Serializer):
+    phone_no = PhoneNumberField()
+
+
+class PaymentConfirmationSerializer(Serializer):
+    payment_id = CharField(max_length=50)
+    order_id = CharField(max_length=50)
+    signature = CharField(max_length=500)
