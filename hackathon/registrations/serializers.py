@@ -1,4 +1,4 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, Serializer
 
 from .models import Registrations, TeamMember
 
@@ -10,17 +10,23 @@ class TeamMemberSerializer(ModelSerializer):
 
 
 class RegSerializer(ModelSerializer):
-    team_members = TeamMemberSerializer(many=True)
-
     class Meta:
         model = Registrations
-        # read_only_fields = ('id', 'have_complete', 'partner')
         fields = '__all__'
 
+
+class TeamRegSerializer(Serializer):
+    team = RegSerializer()
+    members = TeamMemberSerializer(many=True)
+
     def create(self, validated_data):
-        print(validated_data)
-        data = validated_data.pop('team_members')
-        reg = Registrations.objects.create(**validated_data)
-        for member in data:
-            TeamMember.objects.create(team=reg, **member)
-        return reg
+        team = validated_data.pop('team')
+        reg = RegSerializer(data=team)
+        reg.is_valid()
+        reg = reg.save()
+        members = validated_data.pop('members')
+        for member in members:
+            t = TeamMember(**member, team=reg)
+            t.save()
+
+        return {'team': team, 'members': members}
