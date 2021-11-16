@@ -11,6 +11,7 @@ class Registrations(models.Model):
     team_name = models.CharField(max_length=30)
     college_name = models.CharField(max_length=50)
     date = models.DateTimeField(auto_now=True)
+    team_members = models.PositiveSmallIntegerField(null=True, blank=True, default=1)
 
     def __str__(self):
         return f"{self.team_name}: {self.name}"
@@ -33,7 +34,7 @@ class Payment(models.Model):
     team = models.ForeignKey(Registrations, on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now=True)
     amount = models.FloatField()
-    id = models.CharField(max_length=200,primary_key=True)
+    id = models.CharField(max_length=200, primary_key=True)
 
     def __str__(self):
         return self.team.team_name

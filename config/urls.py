@@ -3,11 +3,25 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
-from django.views.generic import TemplateView
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from rest_framework import permissions
 from rest_framework.authtoken.views import obtain_auth_token
 
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Hackathon API",
+        default_version='v1',
+        description="WILL TELL YOU",
+        # terms_of_service="https://www.google.com/policies/terms/",
+        # license=openapi.License(name="BSD License"),
+    ),
+    public=True,
+    permission_classes=(permissions.IsAdminUser,),
+)
+
 urlpatterns = [
-                  path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+                  path("", schema_view.with_ui('redoc', cache_timeout=0), name='docs'),
                   path("register/", include("hackathon.registrations.urls")),
                   # path(
                   #     "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
