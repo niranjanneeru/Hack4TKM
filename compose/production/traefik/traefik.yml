@@ -28,7 +28,7 @@ certificatesResolvers:
 http:
   routers:
     web-secure-router:
-      rule: "Host(`hack.iedctkmce.com`)"
+      rule: "Host(`api.hack4tkm.tech`)"
       entryPoints:
         - web-secure
       middlewares:
