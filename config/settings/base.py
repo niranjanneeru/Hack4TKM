@@ -288,10 +288,12 @@ REST_FRAMEWORK = {
 }
 
 # django-cors-headers - https://github.com/adamchainz/django-cors-headers#setup
-CORS_URLS_REGEX = r"^/api/.*$"
+# CORS_URLS_REGEX = r"^/api/.*$"
 # Your stuff...
 # ------------------------------------------------------------------------------
 
 RAZORPAY_KEY_ID = env("RAZORPAY_KEY_ID")
 
 RAZORPAY_KEY_SECRET = env("RAZORPAY_KEY_SECRET")
+
+CORS_ALLOW_ALL_ORIGINS = True
