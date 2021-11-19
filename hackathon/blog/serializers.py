@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer, SerializerMethodField, CharField
 
-from .models import Blog
+from .models import Blog, Tags
 
 
 class BlogSerializer(ModelSerializer):
@@ -21,3 +21,9 @@ class BlogWriteSerializer(ModelSerializer):
     class Meta:
         model = Blog
         fields = ['author', 'url', 'title', 'description', 'platform', 'image_link', 'tags', ]
+
+
+class TagSerializer(ModelSerializer):
+    class Meta:
+        model = Tags
+        fields = ['name', ]

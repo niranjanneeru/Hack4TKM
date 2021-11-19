@@ -7,7 +7,7 @@ from rest_framework.request import Request
 from rest_framework.response import Response
 
 from hackathon.blog.models import Blog, Tags
-from .serializers import BlogSerializer, BlogWriteSerializer
+from .serializers import BlogSerializer, BlogWriteSerializer, TagSerializer
 
 
 class BlogView(ListAPIView):
@@ -41,3 +41,11 @@ class BlogCreateView(CreateAPIView):
 
 
 blog_create_view = BlogCreateView.as_view()
+
+
+class TagView(ListAPIView):
+    queryset = Tags.objects.all()
+    serializer_class = TagSerializer
+
+
+tag_view = TagView.as_view()
