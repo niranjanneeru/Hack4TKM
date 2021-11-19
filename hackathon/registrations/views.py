@@ -76,7 +76,8 @@ class PaymentRequest(CreateAPIView):
         serializer.is_valid(raise_exception=True)
         phone_no = serializer.validated_data['phone_no']
         team: Registrations = Registrations.objects.filter(phone_no=phone_no).first()
-
+        if not team:
+            return Response({'detail': 'No Registration Found'}, status.HTTP_404_NOT_FOUND)
         if team.payment.filter(has_paid=True):
             return Response({"detail": "Existing Successful Payment"}, status.HTTP_200_OK)
         client = razorpay.Client(auth=(settings.RAZORPAY_KEY_ID, settings.RAZORPAY_KEY_SECRET))
