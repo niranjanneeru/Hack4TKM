@@ -36,8 +36,8 @@ class PhoneNumberView(CreateAPIView):
         if team:
             transaction = team.payment.first()
             data = {
-                'team': RegSerializer(team).initial_data,
-                'members': TeamMemberSerializer(team.team_members, many=True).initial_data,
+                'team': RegSerializer(team).data,
+                'members': TeamMemberSerializer(team.team, many=True).data,
             }
             if transaction.has_paid:
                 data['detail'] = 'This Number has Registered as Team Leader and has Paid for the event'
@@ -50,8 +50,8 @@ class PhoneNumberView(CreateAPIView):
             transaction = member.team.payment.first()
             team = member.team
             data = {
-                'team': RegSerializer(team).initial_data,
-                'members': TeamMemberSerializer(team.team_members, many=True).initial_data
+                'team': RegSerializer(team).data,
+                'members': TeamMemberSerializer(team.team, many=True).data
             }
             if transaction.has_paid:
                 data['detail'] = 'This Number has Registered and has Paid for the event'
