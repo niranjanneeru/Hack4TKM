@@ -7,7 +7,8 @@ from .models import Registrations, TeamMember
 class TeamMemberSerializer(ModelSerializer):
     class Meta:
         model = TeamMember
-        fields = ['name', 'discord_id', 'email_id', 'phone_no', 'college_name']
+        fields = ['name', 'discord_id', 'email_id', 'phone_no', 'college_name', 'address', 'district', 'state',
+                  'pincode']
 
 
 class RegSerializer(ModelSerializer):
