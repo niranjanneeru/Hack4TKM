@@ -23,11 +23,11 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-                  path("", schema_view.with_ui('redoc', cache_timeout=0), name='docs'),
+                  path("docs/", schema_view.with_ui('redoc', cache_timeout=0), name='docs'),
                   path("register/", include("hackathon.registrations.urls")),
                   path("blog/", include("hackathon.blog.urls")),
                   path("data/", include("hackathon.registrations.data_urls")),
-                  path("admin/", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+                  path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
                   # Django Admin, use {% url 'admin:index' %}
                   url(r'^_nested_admin/', include('nested_admin.urls')),
                   path(settings.ADMIN_URL, admin.site.urls),

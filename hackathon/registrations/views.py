@@ -119,7 +119,6 @@ class PaymentConfirmationView(CreateAPIView):
     def create(self, request: Request, *args: Any, **kwargs: Any) -> Response:
         serializer = PaymentConfirmationSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save()
 
         order_id = serializer.validated_data['order_id']
         payment_id = serializer.validated_data['payment_id']
