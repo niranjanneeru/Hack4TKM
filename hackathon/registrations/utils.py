@@ -13,11 +13,9 @@ def amount(team: Registrations):
 def send_email(payment: Payment):
     team = payment.team
     mail_ids = [team.email_id, ]
-    for team_member in team.team:
+    for team_member in team.team.all():
         mail_ids.append(team_member.email_id)
-    print(mail_ids)
-    data = {'team': team, }
-    message = get_template("emails/template.html").render({'data': data})
+    message = get_template("emails/template.html").render({'data': team})
     email = EmailMessage(
         subject="Hack4TKM",
         body=message,

@@ -10,7 +10,7 @@ from rest_framework.response import Response
 from .models import Registrations, Payment, TeamMember, FAQ, Sponsors
 from .serializers import RegSerializer, MobileSerializer, TeamMemberSerializer, PaymentConfirmationSerializer, \
     FAQSerializer, SponsorSerializer, ProfileSerializer, TeamNameSerializer
-from .utils import amount
+from .utils import amount, send_email
 
 
 class RegisterView(CreateAPIView):
@@ -126,10 +126,6 @@ class PaymentConfirmationView(CreateAPIView):
             client = razorpay.Client(auth=(settings.RAZORPAY_KEY_ID, settings.RAZORPAY_KEY_SECRET))
             client.set_app_details({"title": "Hack4TKM", "version": "v1"})
             payments = client.order.payments(order_id)
-            print(type(payments))
-            print()
-            print()
-            print()
             for payment in payments['items']:
                 params_dict = {
                     'razorpay_order_id': order_id,
@@ -138,14 +134,12 @@ class PaymentConfirmationView(CreateAPIView):
                 }
 
                 result = client.utility.verify_payment_signature(params_dict)
-                print(result)
-                print(payment)
                 if result is None and payment["status"] == "captured":
                     obj.payment_id = payment_id
                     obj.has_paid = True
                     obj.signature = serializer.validated_data['signature']
                     obj.save()
-                    # send_email(obj)
+                    send_email(obj)
                     return Response({'detail': 'Payment Successful'}, status.HTTP_201_CREATED)
                 else:
                     return Response({"detail": "Unsuccessful Payment Payment Hashes Mismatch"},
