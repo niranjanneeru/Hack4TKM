@@ -1,1260 +1,1258 @@
-{#<!DOCTYPE html >#}
-{#<html style="background-color: #FFFFFF;margin: 0;padding: 0;">#}
-{##}
-{#<head>#}
-{#  <meta http-equiv="content-type" content="text/html; charset=UTF-8">#}
-{#  <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
-{#  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">#}
-{#  <meta name="format-detection" content="telephone=no">#}
-{#  <title>hack4tkm</title>#}
-{#  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800"#}
-{#        rel="stylesheet">#}
-{##}
-{#  <style type="text/css">#}
-{#    html {#}
-{#      background-color: #FFFFFF;#}
-{#      margin: 0;#}
-{#      padding: 0;#}
-{#    }#}
-{##}
-{#    body, #bodyTable, #bodyCell, #bodyCell {#}
-{#      height: 100% !important;#}
-{#      margin: 0;#}
-{#      padding: 0;#}
-{#      width: 100% !important;#}
-{#      font-family: Montserrat, Arial, sans-serif;#}
-{#    }#}
-{##}
-{#    table {#}
-{#      border-collapse: collapse;#}
-{#    }#}
-{##}
-{#    #bodyTable {#}
-{#      width: 100% !important;#}
-{#      margin: auto;#}
-{#      max-width: 640px !important;#}
-{#      color: #3d3d3d;#}
-{#      font-weight: normal;#}
-{#    }#}
-{##}
-{#    img, a img {#}
-{#      border: 0;#}
-{#      outline: none;#}
-{#      text-decoration: none;#}
-{#      height: auto;#}
-{#      line-height: 100%;#}
-{#    }#}
-{##}
-{#    a {#}
-{#      text-decoration: none !important;#}
-{#      color: #3dbed8;#}
-{#    }#}
-{##}
-{#    h1, h2, h3, h4, h5, h6 {#}
-{#      color: #5F5F5F;#}
-{#      font-weight: 500;#}
-{#      font-family: Montserrat;#}
-{#      font-size: 20px;#}
-{#      line-height: 125%;#}
-{#      text-align: Left;#}
-{#      letter-spacing: normal;#}
-{#      margin-top: 0;#}
-{#      margin-right: 0;#}
-{#      margin-bottom: 10px;#}
-{#      margin-left: 0;#}
-{#      padding-top: 0;#}
-{#      padding-bottom: 0;#}
-{#      padding-left: 0;#}
-{#      padding-right: 0;#}
-{#    }#}
-{##}
-{#    .ReadMsgBody {#}
-{#      width: 100%;#}
-{#    }#}
-{##}
-{#    .ExternalClass {#}
-{#      width: 100%;#}
-{#    }#}
-{##}
-{#    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {#}
-{#      line-height: 100%;#}
-{#    }#}
-{##}
-{#    table, td {#}
-{#      mso-table-lspace: 0;#}
-{#      mso-table-rspace: 0;#}
-{#    }#}
-{##}
-{#    #outlook a {#}
-{#      padding: 0;#}
-{#    }#}
-{##}
-{#    img {#}
-{#      -ms-interpolation-mode: bicubic;#}
-{#      display: block;#}
-{#      outline: none;#}
-{#      text-decoration: none;#}
-{#    }#}
-{##}
-{#    body, table, td, p, a, li, blockquote {#}
-{#      -ms-text-size-adjust: 100%;#}
-{#      -webkit-text-size-adjust: 100%;#}
-{#      font-weight: normal !important;#}
-{#    }#}
-{##}
-{#    .ExternalClass td[class=ecxflexibleContainerBox] h3 {#}
-{#      padding-top: 10px !important;#}
-{#    }#}
-{##}
-{#    h1 {#}
-{#      display: block;#}
-{#      font-size: 26px;#}
-{#      font-style: normal;#}
-{#      font-weight: normal;#}
-{#      line-height: 100%;#}
-{#    }#}
-{##}
-{#    h2 {#}
-{#      display: block;#}
-{#      font-size: 20px;#}
-{#      font-style: normal;#}
-{#      font-weight: normal;#}
-{#      line-height: 120%;#}
-{#    }#}
-{##}
-{#    h3 {#}
-{#      display: block;#}
-{#      font-size: 17px;#}
-{#      font-style: normal;#}
-{#      font-weight: normal;#}
-{#      line-height: 110%;#}
-{#    }#}
-{##}
-{#    h4 {#}
-{#      display: block;#}
-{#      font-size: 18px;#}
-{#      font-style: italic;#}
-{#      font-weight: normal;#}
-{#      line-height: 100%;#}
-{#    }#}
-{##}
-{#    .linkRemoveBorder {#}
-{#      border-bottom: 0 !important;#}
-{#    }#}
-{##}
-{#    .flexibleContainerCellDivider {#}
-{#      padding-bottom: 0 !important;#}
-{#      padding-top: 0 !important;#}
-{#    }#}
-{##}
-{#    body, #bodyTable {#}
-{#      background-color: #FFFFFF;#}
-{#    }#}
-{##}
-{#    #emailHeader {#}
-{#      background-color: #f5c732;#}
-{#    }#}
-{##}
-{#    #emailBody {#}
-{#      background-color: #ffffff;#}
-{#    }#}
-{##}
-{#    #emailFooter {#}
-{#      background-color: #FFFFFF;#}
-{#    }#}
-{##}
-{#    .nestedContainer {#}
-{#      background-color: #F8F8F8;#}
-{#      border: 1px solid #CCCCCC;#}
-{#    }#}
-{##}
-{#    .emailButton {#}
-{#      background-color: #205478;#}
-{#      border-collapse: separate;#}
-{#    }#}
-{##}
-{#    .buttonContent {#}
-{#      color: #FFFFFF;#}
-{#      font-family: Helvetica;#}
-{#      font-size: 18px;#}
-{#      font-weight: bold;#}
-{#      line-height: 100%;#}
-{#      padding: 15px;#}
-{#      text-align: center;#}
-{#    }#}
-{##}
-{#    .buttonContent a {#}
-{#      color: #FFFFFF;#}
-{#      display: block;#}
-{#      text-decoration: none !important;#}
-{#      border: 0 !important;#}
-{#    }#}
-{##}
-{#    .emailCalendar {#}
-{#      background-color: #FFFFFF;#}
-{#      border: 1px solid #CCCCCC;#}
-{#    }#}
-{##}
-{#    .emailCalendarMonth {#}
-{#      background-color: #205478;#}
-{#      color: #FFFFFF;#}
-{#      font-family: Helvetica, Arial, sans-serif;#}
-{#      font-size: 16px;#}
-{#      font-weight: bold;#}
-{#      padding-top: 10px;#}
-{#      padding-bottom: 10px;#}
-{#      text-align: center;#}
-{#    }#}
-{##}
-{#    .emailCalendarDay {#}
-{#      color: #205478;#}
-{#      font-family: Helvetica, Arial, sans-serif;#}
-{#      font-size: 60px;#}
-{#      font-weight: bold;#}
-{#      line-height: 100%;#}
-{#      padding-top: 20px;#}
-{#      padding-bottom: 20px;#}
-{#      text-align: center;#}
-{#    }#}
-{##}
-{#    .imageContentText {#}
-{#      margin-top: 10px;#}
-{#      line-height: 0;#}
-{#    }#}
-{##}
-{#    .imageContentText a {#}
-{#      line-height: 0;#}
-{#    }#}
-{##}
-{#    #invisibleIntroduction {#}
-{#      display: none !important;#}
-{#    }#}
-{##}
-{#    .ios-color-hack a {#}
-{#      color: #3d3d3d !important;#}
-{#      text-decoration: none !important;#}
-{#    }#}
-{##}
-{#    .ios-color-hack2 a {#}
-{#      color: #205478 !important;#}
-{#      text-decoration: none !important;#}
-{#    }#}
-{##}
-{#    .ios-color-hack3 a {#}
-{#      color: #8B8B8B !important;#}
-{#      text-decoration: none !important;#}
-{#    }#}
-{##}
-{#    .a[href^=tel], a[href^=sms] {#}
-{#      text-decoration: none !important;#}
-{#      color: #606060 !important;#}
-{#      pointer-events: none !important;#}
-{#      cursor: default !important;#}
-{#    }#}
-{##}
-{#    .mobile_link a[href^=tel], .mobile_link a[href^=sms] {#}
-{#      text-decoration: none !important;#}
-{#      color: #606060 !important;#}
-{#      pointer-events: auto !important;#}
-{#      cursor: default !important;#}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      body {#}
-{#        width: 100% !important;#}
-{#        min-width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      #emailPreHeader, #emailHeader, #emailBody, #emailFooter, .flexibleContainer, .flexibleContainerCell {#}
-{#        width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .flexibleContainerBox, .flexibleContainerBox table {#}
-{#        display: block;#}
-{#        width: 100%;#}
-{#        text-align: left;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .imageContent img {#}
-{#        height: auto !important;#}
-{#        width: 100% !important;#}
-{#        max-width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .flexibleImage {#}
-{#        height: auto !important;#}
-{#        max-height: none !important;#}
-{#        width: 100% !important;#}
-{#        max-width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .flexibleImageSmall {#}
-{#        height: auto !important;#}
-{#        width: auto !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .nerd_wallet_logo {#}
-{#        max-width: 107px !important;#}
-{#        max-height: 16px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .social_icon {#}
-{#        max-width: 16px !important;#}
-{#        max-height: 16px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .mobile_header_title {#}
-{#        font-size: 32px !important;#}
-{#        line-height: 34px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .mobile_header_copy {#}
-{#        line-height: 24px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      #appDownload {#}
-{#        width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .mobile_appDl_text {#}
-{#        font-size: 16px !important;#}
-{#        line-height: 25px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .templateColumnContainer {#}
-{#        display: block !important;#}
-{#        width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .columnContentCenter {#}
-{#        text-align: center !important;#}
-{#        padding-left: 20px !important;#}
-{#        padding-right: 20px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .columnImageFull {#}
-{#        text-align: center !important;#}
-{#        padding-left: 0 !important;#}
-{#        padding-right: 0 !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .threeColumnContainer {#}
-{#        display: block !important;#}
-{#        width: 100% !important;#}
-{#        max-width: 250px !important;#}
-{#        margin: 0 auto !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .threeColumnContentCenter {#}
-{#        text-align: center !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .paddingTopTen {#}
-{#        padding-top: 10px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .paddingTopThirty {#}
-{#        padding-top: 30px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .paddingZero {#}
-{#        padding-left: 0 !important;#}
-{#        padding-top: 0 !important;#}
-{#        padding-right: 0 !important;#}
-{#        padding-bottom: 0 !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .text_mobile_14 {#}
-{#        font-size: 14px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .text_mobile_center {#}
-{#        text-align: center !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .button_mobile_center {#}
-{#        display: block !important;#}
-{#        width: 100% !important;#}
-{#        max-width: 210px !important;#}
-{#        margin: 0 auto !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .mobile_spacing {#}
-{#        padding-top: 30px !important;#}
-{#        padding-bottom: 0 !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      u + .body .cta_align {#}
-{#        padding-left: 17px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {#}
-{#      .email-container {#}
-{#        min-width: 375px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    html {#}
-{#      background-color: #FFFFFF;#}
-{#      margin: 0;#}
-{#      padding: 0;#}
-{#    }#}
-{##}
-{#    body, #bodyTable, #bodyCell, #bodyCell {#}
-{#      height: 100% !important;#}
-{#      margin: 0;#}
-{#      padding: 0;#}
-{#      width: 100% !important;#}
-{#      font-family: Montserrat, Arial, sans-serif;#}
-{#    }#}
-{##}
-{#    table {#}
-{#      border-collapse: collapse;#}
-{#    }#}
-{##}
-{#    #bodyTable {#}
-{#      width: 100% !important;#}
-{#      margin: auto;#}
-{#      max-width: 640px !important;#}
-{#      color: #3d3d3d;#}
-{#      font-weight: normal;#}
-{#    }#}
-{##}
-{#    img, a img {#}
-{#      border: 0;#}
-{#      outline: none;#}
-{#      text-decoration: none;#}
-{#      height: auto;#}
-{#      line-height: 100%;#}
-{#    }#}
-{##}
-{#    a {#}
-{#      text-decoration: none !important;#}
-{#    }#}
-{##}
-{#    h1, h2, h3, h4, h5, h6 {#}
-{#      color: #5F5F5F;#}
-{#      font-weight: 500;#}
-{#      font-family: Montserrat;#}
-{#      font-size: 20px;#}
-{#      line-height: 125%;#}
-{#      text-align: Left;#}
-{#      letter-spacing: normal;#}
-{#      margin-top: 0;#}
-{#      margin-right: 0;#}
-{#      margin-bottom: 10px;#}
-{#      margin-left: 0;#}
-{#      padding-top: 0;#}
-{#      padding-bottom: 0;#}
-{#      padding-left: 0;#}
-{#      padding-right: 0;#}
-{#    }#}
-{##}
-{#    .ReadMsgBody {#}
-{#      width: 100%;#}
-{#    }#}
-{##}
-{#    .ExternalClass {#}
-{#      width: 100%;#}
-{#    }#}
-{##}
-{#    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {#}
-{#      line-height: 100%;#}
-{#    }#}
-{##}
-{#    table, td {#}
-{#      mso-table-lspace: 0;#}
-{#      mso-table-rspace: 0;#}
-{#    }#}
-{##}
-{#    #outlook a {#}
-{#      padding: 0;#}
-{#    }#}
-{##}
-{#    img {#}
-{#      -ms-interpolation-mode: bicubic;#}
-{#      display: block;#}
-{#      outline: none;#}
-{#      text-decoration: none;#}
-{#    }#}
-{##}
-{#    body, table, td, p, a, li, blockquote {#}
-{#      -ms-text-size-adjust: 100%;#}
-{#      -webkit-text-size-adjust: 100%;#}
-{#      font-weight: normal !important;#}
-{#    }#}
-{##}
-{#    .ExternalClass td[class=ecxflexibleContainerBox] h3 {#}
-{#      padding-top: 10px !important;#}
-{#    }#}
-{##}
-{#    h1 {#}
-{#      display: block;#}
-{#      font-size: 26px;#}
-{#      font-style: normal;#}
-{#      font-weight: normal;#}
-{#      line-height: 100%;#}
-{#    }#}
-{##}
-{#    h2 {#}
-{#      display: block;#}
-{#      font-size: 20px;#}
-{#      font-style: normal;#}
-{#      font-weight: normal;#}
-{#      line-height: 120%;#}
-{#    }#}
-{##}
-{#    h3 {#}
-{#      display: block;#}
-{#      font-size: 17px;#}
-{#      font-style: normal;#}
-{#      font-weight: normal;#}
-{#      line-height: 110%;#}
-{#    }#}
-{##}
-{#    h4 {#}
-{#      display: block;#}
-{#      font-size: 18px;#}
-{#      font-style: italic;#}
-{#      font-weight: normal;#}
-{#      line-height: 100%;#}
-{#    }#}
-{##}
-{#    .linkRemoveBorder {#}
-{#      border-bottom: 0 !important;#}
-{#    }#}
-{##}
-{#    .flexibleContainerCellDivider {#}
-{#      padding-bottom: 0 !important;#}
-{#      padding-top: 0 !important;#}
-{#    }#}
-{##}
-{#    body, #bodyTable {#}
-{#      background-color: #FFFFFF;#}
-{#    }#}
-{##}
-{#    #emailHeader {#}
-{#      background-color: #f5c732;#}
-{#    }#}
-{##}
-{#    #emailBody {#}
-{#      background-color: #ffffff;#}
-{#    }#}
-{##}
-{#    #emailFooter {#}
-{#      background-color: #FFFFFF;#}
-{#    }#}
-{##}
-{#    .nestedContainer {#}
-{#      background-color: #F8F8F8;#}
-{#      border: 1px solid #CCCCCC;#}
-{#    }#}
-{##}
-{#    .emailButton {#}
-{#      background-color: #205478;#}
-{#      border-collapse: separate;#}
-{#    }#}
-{##}
-{#    .buttonContent {#}
-{#      color: #FFFFFF;#}
-{#      font-family: Helvetica;#}
-{#      font-size: 18px;#}
-{#      font-weight: bold;#}
-{#      line-height: 100%;#}
-{#      padding: 15px;#}
-{#      text-align: center;#}
-{#    }#}
-{##}
-{#    .buttonContent a {#}
-{#      color: #FFFFFF;#}
-{#      display: block;#}
-{#      text-decoration: none !important;#}
-{#      border: 0 !important;#}
-{#    }#}
-{##}
-{#    .emailCalendar {#}
-{#      background-color: #FFFFFF;#}
-{#      border: 1px solid #CCCCCC;#}
-{#    }#}
-{##}
-{#    .emailCalendarMonth {#}
-{#      background-color: #205478;#}
-{#      color: #FFFFFF;#}
-{#      font-family: Helvetica, Arial, sans-serif;#}
-{#      font-size: 16px;#}
-{#      font-weight: bold;#}
-{#      padding-top: 10px;#}
-{#      padding-bottom: 10px;#}
-{#      text-align: center;#}
-{#    }#}
-{##}
-{#    .emailCalendarDay {#}
-{#      color: #205478;#}
-{#      font-family: Helvetica, Arial, sans-serif;#}
-{#      font-size: 60px;#}
-{#      font-weight: bold;#}
-{#      line-height: 100%;#}
-{#      padding-top: 20px;#}
-{#      padding-bottom: 20px;#}
-{#      text-align: center;#}
-{#    }#}
-{##}
-{#    .imageContentText {#}
-{#      margin-top: 10px;#}
-{#      line-height: 0;#}
-{#    }#}
-{##}
-{#    .imageContentText a {#}
-{#      line-height: 0;#}
-{#    }#}
-{##}
-{#    #invisibleIntroduction {#}
-{#      display: none !important;#}
-{#    }#}
-{##}
-{#    .ios-color-hack a {#}
-{#      color: #3d3d3d !important;#}
-{#      text-decoration: none !important;#}
-{#    }#}
-{##}
-{#    .ios-color-hack2 a {#}
-{#      color: #205478 !important;#}
-{#      text-decoration: none !important;#}
-{#    }#}
-{##}
-{#    .ios-color-hack3 a {#}
-{#      color: #8B8B8B !important;#}
-{#      text-decoration: none !important;#}
-{#    }#}
-{##}
-{#    .a[href^=tel], a[href^=sms] {#}
-{#      text-decoration: none !important;#}
-{#      color: #606060 !important;#}
-{#      pointer-events: none !important;#}
-{#      cursor: default !important;#}
-{#    }#}
-{##}
-{#    .mobile_link a[href^=tel], .mobile_link a[href^=sms] {#}
-{#      text-decoration: none !important;#}
-{#      color: #606060 !important;#}
-{#      pointer-events: auto !important;#}
-{#      cursor: default !important;#}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      body {#}
-{#        width: 100% !important;#}
-{#        min-width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      #emailPreHeader, #emailHeader, #emailBody, #emailFooter, .flexibleContainer, .flexibleContainerCell {#}
-{#        width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .flexibleContainerBox, .flexibleContainerBox table {#}
-{#        display: block;#}
-{#        width: 100%;#}
-{#        text-align: left;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .imageContent img {#}
-{#        height: auto !important;#}
-{#        width: 100% !important;#}
-{#        max-width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .flexibleImage {#}
-{#        height: auto !important;#}
-{#        max-height: none !important;#}
-{#        width: 100% !important;#}
-{#        max-width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .flexibleImageSmall {#}
-{#        height: auto !important;#}
-{#        width: auto !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .nerd_wallet_logo {#}
-{#        max-width: 107px !important;#}
-{#        max-height: 16px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .social_icon {#}
-{#        max-width: 16px !important;#}
-{#        max-height: 16px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .mobile_header_title {#}
-{#        font-size: 32px !important;#}
-{#        line-height: 34px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .mobile_header_copy {#}
-{#        line-height: 24px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      #appDownload {#}
-{#        width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .mobile_appDl_text {#}
-{#        font-size: 16px !important;#}
-{#        line-height: 25px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .templateColumnContainer {#}
-{#        display: block !important;#}
-{#        width: 100% !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .columnContentCenter {#}
-{#        text-align: center !important;#}
-{#        padding-left: 20px !important;#}
-{#        padding-right: 20px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .columnImageFull {#}
-{#        text-align: center !important;#}
-{#        padding-left: 0 !important;#}
-{#        padding-right: 0 !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .threeColumnContainer {#}
-{#        display: block !important;#}
-{#        width: 100% !important;#}
-{#        max-width: 250px !important;#}
-{#        margin: 0 auto !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .threeColumnContentCenter {#}
-{#        text-align: center !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .paddingTopTen {#}
-{#        padding-top: 10px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .paddingTopThirty {#}
-{#        padding-top: 30px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .paddingZero {#}
-{#        padding-left: 0 !important;#}
-{#        padding-top: 0 !important;#}
-{#        padding-right: 0 !important;#}
-{#        padding-bottom: 0 !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .text_mobile_14 {#}
-{#        font-size: 14px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .text_mobile_center {#}
-{#        text-align: center !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .button_mobile_center {#}
-{#        display: block !important;#}
-{#        width: 100% !important;#}
-{#        max-width: 210px !important;#}
-{#        margin: 0 auto !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      .mobile_spacing {#}
-{#        padding-top: 30px !important;#}
-{#        padding-bottom: 0 !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (max-width: 640px) {#}
-{#      u + .body .cta_align {#}
-{#        padding-left: 17px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {#}
-{#      .email-container {#}
-{#        min-width: 375px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media screen yahoo and (max-width:#}
-{##}
-{#    640px#}
-{##}
-{#    ) {#}
-{#      .cta_align {#}
-{#        padding-left: 20px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media screen yahoo and (max-width:#}
-{##}
-{#    640px#}
-{##}
-{#    ) {#}
-{#      .nerd_wallet_logo {#}
-{#        width: 107px !important;#}
-{#        height: 107px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{##}
-{#    @media screen yahoo and (max-width:#}
-{##}
-{#    640px#}
-{##}
-{#    ) {#}
-{#      .social_icon {#}
-{#        width: 16px !important;#}
-{#        height: 16px !important;#}
-{#      }#}
-{##}
-{#    }#}
-{#  </style>#}
-{#</head>#}
-{##}
-{#<body class="body" bgcolor="#FFFFFF" leftmargin="0" marginwidth="0" topmargin="0"#}
-{#      marginheight="0" offset="0"#}
-{#      style="margin: 0;padding: 0;font-family: Montserrat,Arial,sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;height: 100% !important;width: 100% !important;font-weight: normal !important;">#}
-{#<!-- CENTER THE EMAIL // -->#}
-{#<!-- 1. The center tag should normally put all the content in the middle of the#}
-{#email page. I added "table-layout: fixed;" style to force yahoomail which by default#}
-{#put the content left. 2. For hotmail and yahoomail, the contents of the email starts#}
-{#from this center, so we try to apply necessary styling e.g. background-color. -->#}
-{#<div class="email-container">#}
-{#  <center style="background-color:#FFFFFF;">#}
-{#    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyTable"#}
-{#           style="height: 100%;max-width: 100% !important;width: 100% !important;min-width: 100% !important;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: auto;padding: 0;font-family: Montserrat,Arial,sans-serif;color: #3d3d3d;font-weight: normal !important;background-color: #FFFFFF;">#}
-{#      <tr>#}
-{#        <td align="center" valign="top" id="bodyCell"#}
-{#            style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;font-family: Montserrat,Arial,sans-serif;font-weight: normal !important;height: 100% !important;width: 100% !important;">#}
-{#          <!-- START PRE HEADER // -->#}
-{##}
-{#          <!-- // END PRE HEADER -->#}
-{#          <!-- START HEADER -->#}
-{#          <table bgcolor="#f5c732" border="0" cellpadding="0" cellspacing="0" width="640"#}
-{#                 id="emailHeader"#}
-{#                 style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #f5c732;font-weight: normal !important;">#}
-{#            <tr>#}
-{#              <td align="center" valign="top"#}
-{#                  style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                <!-- CENTERING TABLE // -->#}
-{#                <table border="0" cellpadding="0" cellspacing="0" width="100%"#}
-{#                       style="color: #3d3d3d;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                  <tr>#}
-{#                    <td align="center" valign="top"#}
-{#                        style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                      <!-- FLEXIBLE CONTAINER // -->#}
-{#                      <table border="0" cellpadding="0" cellspacing="0" width="640" class="flexibleContainer"#}
-{#                             style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                        <tr>#}
-{#                          <td align="left" valign="top" width="640" class="flexibleContainerCell"#}
-{#                              style="padding-left: 20px;padding-right: 20px;padding-top: 30px;padding-bottom: 0px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                            <!-- HEADER LOGO & SOCIAL SECTION // -->#}
-{#                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"#}
-{#                                   style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                              <tr>#}
-{#                                <td align="right" valign="middle"#}
-{#                                    style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                  <table border="0" cellpadding="0" cellspacing="0" width="100%"#}
-{#                                         style="max-width: 100%;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                    <tr>#}
-{#                                      <td align="left"#}
-{#                                          style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                        <a href="https://hack4tkm.in/"#}
-{#                                           target="_blank"#}
-{#                                           style="color: #fff;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-decoration: none !important;font-weight: normal !important;">#}
-{#                                          #H4TKM#}
-{#                                        </a>#}
-{#                                      </td>#}
-{#                                      <td align="right" width="320"#}
-{#                                          style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                        <!-- SOCIAL ICONS // -->#}
-{#                                        <table align="right" border="0" cellpadding="0" cellspacing="0" width="100%"#}
-{#                                               style="max-width: 100%;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                          <tr>#}
-{#                                            <td#}
-{#                                              style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;"></td>#}
-{#                                            <td width="20" align="right"#}
-{#                                                style="padding-left: 5px;padding-right: 5px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                              <a href="https://www.linkedin.com/company/iedc-tkmce" target="_blank"#}
-{#                                                 style="text-decoration: none;color: #3d3d3d;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                                <img class="social_icon"#}
-{#                                                     style="display: block;max-width: 20px;max-height: 20px;width: 100%;border: 0;outline: none;text-decoration: none;height: auto;line-height: 100%;-ms-interpolation-mode: bicubic;"#}
-{#                                                     src="https://avatars.githubusercontent.com/u/357098?s=200&v=4"#}
-{#                                                     width="20" alt="facebook_20wt.png">#}
-{#                                              </a>#}
-{#                                            </td>#}
-{#                                            <td width="20" align="right"#}
-{#                                                style="padding-left: 5px;padding-right: 5px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                              <a href="https://www.instagram.com/hack4tkm/" target="_blank"#}
-{#                                                 style="text-decoration: none;color: #3d3d3d;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                                <img class="social_icon"#}
-{#                                                     style="display: block;max-width: 20px;max-height: 20px;width: 100%;border: 0;outline: none;text-decoration: none;height: auto;line-height: 100%;-ms-interpolation-mode: bicubic;"#}
-{#                                                     src="http://cdn.nerdwallet.com/email/final/instagram_20wt.png"#}
-{#                                                     width="20" alt="instagram_20wt.png">#}
-{#                                              </a>#}
-{#                                            </td>#}
-{##}
-{#                                          </tr>#}
-{#                                        </table>#}
-{#                                      </td>#}
-{#                                    </tr>#}
-{#                                    <tr>#}
-{#                                      <td colspan="2" height="32"#}
-{#                                          style="height: 32px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;"></td>#}
-{#                                    </tr>#}
-{#                                  </table>#}
-{#                                </td>#}
-{#                              </tr>#}
-{#                            </table>#}
-{#                            <!-- END HEADER LOGO & SOCIAL SECTION -->#}
-{#                            <!-- MAIN CONTENT -->#}
-{#                            <table border="0" cellpadding="0" cellspacing="0" width="100%"#}
-{#                                   style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                              <tr>#}
-{#                                <td mc:edit="header_sub_heading" align="center" valign="top" class="textContent"#}
-{#                                    style="color: #FFFFFF;line-height: 20px;font-family: Montserrat, Arial, sans-serif;font-size: 13px;font-weight: 500 !important;margin-bottom: 5px;text-align: center;text-transform: uppercase;letter-spacing: 1px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">#}
-{#                                  WELCOME ABOARD , {{ data.name }}#}
-{#                                </td>#}
-{#                              </tr>#}
-{#                              <tr>#}
-{#                                <td mc:edit="header_main_heading" class="mobile_header_title" align="center"#}
-{#                                    valign="top"#}
-{#                                    style="color: #FFFFFF;line-height: 43px;font-family: Montserrat, Tahoma, Arial;font-size: 36px;font-weight: 800 !important;margin-bottom: 5px;text-align: center;letter-spacing: 1px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">#}
-{#                                  {{ data.team_name }}#}
-{#                              </tr>#}
-{#                              <tr>#}
-{#                                <td mc:edit="header_main_copy" align="center" valign="top" class="mobile_header_copy"#}
-{#                                    style="color: #FFFFFF;line-height: 20px;font-family: Montserrat, Arial, sans-serif;font-size: 16px;font-weight: 400 !important;margin-bottom: 5px;text-align: center;padding-top: 20px;padding-bottom: 10px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">#}
-{#                                  You’re braver than you believe,<br/> stronger than you seem, <br/>and smarter than you#}
-{#                                  think.#}
-{#                                </td>#}
-{#                                </td>#}
-{#                              </tr>#}
-{#                              <tr>#}
-{#                                <td align="center"#}
-{#                                    style="padding-left: 20px;padding-right: 20px;padding-top: 20px;padding-bottom: 30px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                  <!-- Button -->#}
-{#                                  <table width="100%" border="0" cellspacing="0" cellpadding="0"#}
-{#                                         style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                    <tr>#}
-{#                                      <td align="center"#}
-{#                                          style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                        <table class="green_button" border="0" cellspacing="0" cellpadding="0"#}
-{#                                               style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                          <tr>#}
-{#                                            <td mc:edit="header_button" align="center" height="35"#}
-{#                                                style="-webkit-border-radius: 5px;border-radius: 5px;line-height: 24px;height: 35px !important;white-space: nowrap !important;font-family: Montserrat, Arial, sans-serif;color: #8ccb32 !important;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;"#}
-{#                                                bgcolor="#70be52">#}
-{#                                              <a href="https://hack4tkm.in/"#}
-{#                                                 target="_blank"#}
-{#                                                 style="font-size: 16px;font-weight: 500 !important;font-family: Montserrat, Arial, sans-serif;color: #FFFFFF;text-decoration: none;-webkit-border-radius: 5px;border-radius: 5px;padding-top: 5px;padding-bottom: 5px;padding-right: 30px;padding-left: 30px;border: 1px solid #70be52;display: inline-block;white-space: nowrap;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Join#}
-{#                                                Us</a>#}
-{#                                            </td>#}
-{#                                          </tr>#}
-{#                                        </table>#}
-{#                                      </td>#}
-{#                                    </tr>#}
-{#                                  </table>#}
-{#                                </td>#}
-{#                              </tr>#}
-{#                            </table>#}
-{#                            <!-- END MAIN CONTENT -->#}
-{#                          </td>#}
-{#                        </tr>#}
-{#                      </table>#}
-{#                      <!-- // FLEXIBLE CONTAINER -->#}
-{#                    </td>#}
-{#                  </tr>#}
-{#                </table>#}
-{#                <!-- // CENTERING TABLE -->#}
-{#              </td>#}
-{#            </tr>#}
-{#            <!-- FULL WIDHT IMAGE // -->#}
-{#            <tr>#}
-{#              <td align="center" valign="top"#}
-{#                  style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                <!-- CENTERING TABLE // -->#}
-{#                <table border="0" cellpadding="0" cellspacing="0" width="100%"#}
-{#                       style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                  <tr>#}
-{#                    <td align="center" valign="top"#}
-{#                        style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                      <!-- FLEXIBLE CONTAINER // -->#}
-{#                      <table border="0" cellpadding="0" cellspacing="0" width="640" class="flexibleContainer"#}
-{#                             style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                        <tr>#}
-{#                          <td align="center" valign="top" width="640" class="flexibleContainerCell"#}
-{#                              style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                            <!-- CONTENT TABLE // -->#}
-{#                            <table border="0" cellpadding="0" cellspacing="0" width="100%"#}
-{#                                   style="min-width: 100% !important;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                              <tr>#}
-{#                                <td valign="top" class="imageContent"#}
-{#                                    style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                  <a#}
-{#                                    href="/home/signin?flow=credit-score&redirect_uri=%2Fhome%2Fdashboard%2Fhome%3F&utm_campaign=ipx_mktg_072817_onboarding_1&utm_content=hero_image&utm_medium=eml&utm_source=mc&utm_term=ipx_onboarding_072817"#}
-{#                                    target="_blank"#}
-{#                                    style="color: #3dbed8;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-decoration: none !important;font-weight: normal !important;">#}
-{#                                    <img src="https://i.imgur.com/1nXrmqj.jpg"#}
-{#                                         width="640" class="flexibleImage"#}
-{#                                         style="max-width: 640px;width: 100%;min-width: 100%!important;display: block;border: 0;outline: none;text-decoration: none;height: auto;line-height: 100%;-ms-interpolation-mode: bicubic;"#}
-{#                                         alt="Text" title="Text">#}
-{#                                  </a>#}
-{#                                </td>#}
-{#                              </tr>#}
-{#                            </table>#}
-{#                            <!-- // CONTENT TABLE -->#}
-{#                          </td>#}
-{#                        </tr>#}
-{#                      </table>#}
-{#                      <!-- // FLEXIBLE CONTAINER -->#}
-{#                    </td>#}
-{#                  </tr>#}
-{#                </table>#}
-{#                <!-- // CENTERING TABLE -->#}
-{#              </td>#}
-{#            </tr>#}
-{#            <!-- // END FULL WIDTH IMAGE -->#}
-{#          </table>#}
-{#          <!-- // END HEADER -->#}
-{#          <!-- EMAIL BODY // -->#}
-{##}
-{#          <!-- // END EMAIL BODY -->#}
-{#          <!-- EMAIL FOOTER // -->#}
-{#          <!-- The table "emailBody" is the email's container. Its width can be set to 100%#}
-{#          for a color band that spans the width of the page. -->#}
-{#          <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="640"#}
-{#                 id="emailFooter"#}
-{#                 style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;font-weight: normal !important;">#}
-{#            <!-- DOWNLOAD APP ROW // -->#}
-{#            <tr>#}
-{#              <td align="center" valign="top"#}
-{#                  style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                <!-- CENTERING TABLE // -->#}
-{#                <table border="0" cellpadding="0" cellspacing="0" width="100%"#}
-{#                       style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                  <tr>#}
-{#                    <td align="center" valign="top"#}
-{#                        style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                      <!-- FLEXIBLE CONTAINER // -->#}
-{#                      <!-- // FLEXIBLE CONTAINER -->#}
-{#                    </td>#}
-{#                  </tr>#}
-{#                </table>#}
-{#                <!-- // CENTERING TABLE -->#}
-{#              </td>#}
-{#            </tr>#}
-{#            <!-- END DOWNLOAD APP ROW -->#}
-{#            <!-- FOOTER ROW // -->#}
-{#            <tr>#}
-{#              <td align="center" valign="top"#}
-{#                  style="padding-left: 20px;padding-right: 20px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                <!-- CENTERING TABLE // -->#}
-{#                <table border="0" cellpadding="0" cellspacing="0" width="100%"#}
-{#                       style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                  <tr>#}
-{#                    <td align="center" valign="top"#}
-{#                        style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                      <!-- FLEXIBLE CONTAINER // -->#}
-{#                      <table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer"#}
-{#                             style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                        <tr>#}
-{#                          <td align="center" valign="top" width="500" class="flexibleContainerCell"#}
-{#                              style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                            <table border="0" cellpadding="0" cellspacing="0" width="100%"#}
-{#                                   style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                              <tr>#}
-{##}
-{#                              </tr>#}
-{#                              <tr>#}
-{#                                <td valign="top" bgcolor="#FFFFFF"#}
-{#                                    style="padding-top: 10px;padding-bottom: 10px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">#}
-{#                                  <div#}
-{#                                    style="font-family:Montserrat, Arial, sans-serif;font-size:12px;color:#3d3d3d;text-align:center;line-height:20px;">#}
-{#                                    <span class="ios-color-hack">Discord Link will be mailed soon <br> IEDC TKMCE | TKM College of Engineering | Kollam</span>#}
-{##}
-{#                                  </div>#}
-{#                                </td>#}
-{#                              </tr>#}
-{#                              <tr>#}
-{##}
-{#                              </tr>#}
-{#                            </table>#}
-{#                          </td>#}
-{#                        </tr>#}
-{#                      </table>#}
-{#                      <!-- // FLEXIBLE CONTAINER -->#}
-{#                    </td>#}
-{#                  </tr>#}
-{#                </table>#}
-{#                <!-- // CENTERING TABLE -->#}
-{#              </td>#}
-{#            </tr>#}
-{#            <!-- END FOOTER ROW -->#}
-{#          </table>#}
-{#          <!-- // END -->#}
-{#        </td>#}
-{#      </tr>#}
-{#    </table>#}
-{#  </center>#}
-{#</div>#}
+<!DOCTYPE html >
+<html style="background-color: #FFFFFF;margin: 0;padding: 0;">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>hack4tkm</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800"
+        rel="stylesheet">
+
+  <style type="text/css">
+    html {
+      background-color: #FFFFFF;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, #bodyTable, #bodyCell, #bodyCell {
+      height: 100% !important;
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      font-family: Montserrat, Arial, sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    #bodyTable {
+      width: 100% !important;
+      margin: auto;
+      max-width: 640px !important;
+      color: #3d3d3d;
+      font-weight: normal;
+    }
+
+    img, a img {
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      height: auto;
+      line-height: 100%;
+    }
+
+    a {
+      text-decoration: none !important;
+      color: #3dbed8;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #5F5F5F;
+      font-weight: 500;
+      font-family: Montserrat;
+      font-size: 20px;
+      line-height: 125%;
+      text-align: Left;
+      letter-spacing: normal;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 10px;
+      margin-left: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .ReadMsgBody {
+      width: 100%;
+    }
+
+    .ExternalClass {
+      width: 100%;
+    }
+
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+      line-height: 100%;
+    }
+
+    table, td {
+      mso-table-lspace: 0;
+      mso-table-rspace: 0;
+    }
+
+    #outlook a {
+      padding: 0;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      display: block;
+      outline: none;
+      text-decoration: none;
+    }
+
+    body, table, td, p, a, li, blockquote {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      font-weight: normal !important;
+    }
+
+    .ExternalClass td[class=ecxflexibleContainerBox] h3 {
+      padding-top: 10px !important;
+    }
+
+    h1 {
+      display: block;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 100%;
+    }
+
+    h2 {
+      display: block;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 120%;
+    }
+
+    h3 {
+      display: block;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 110%;
+    }
+
+    h4 {
+      display: block;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: normal;
+      line-height: 100%;
+    }
+
+    .linkRemoveBorder {
+      border-bottom: 0 !important;
+    }
+
+    .flexibleContainerCellDivider {
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    body, #bodyTable {
+      background-color: #FFFFFF;
+    }
+
+    #emailHeader {
+      background-color: #f5c732;
+    }
+
+    #emailBody {
+      background-color: #ffffff;
+    }
+
+    #emailFooter {
+      background-color: #FFFFFF;
+    }
+
+    .nestedContainer {
+      background-color: #F8F8F8;
+      border: 1px solid #CCCCCC;
+    }
+
+    .emailButton {
+      background-color: #205478;
+      border-collapse: separate;
+    }
+
+    .buttonContent {
+      color: #FFFFFF;
+      font-family: Helvetica;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 100%;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .buttonContent a {
+      color: #FFFFFF;
+      display: block;
+      text-decoration: none !important;
+      border: 0 !important;
+    }
+
+    .emailCalendar {
+      background-color: #FFFFFF;
+      border: 1px solid #CCCCCC;
+    }
+
+    .emailCalendarMonth {
+      background-color: #205478;
+      color: #FFFFFF;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    .emailCalendarDay {
+      color: #205478;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    .imageContentText {
+      margin-top: 10px;
+      line-height: 0;
+    }
+
+    .imageContentText a {
+      line-height: 0;
+    }
+
+    #invisibleIntroduction {
+      display: none !important;
+    }
+
+    .ios-color-hack a {
+      color: #3d3d3d !important;
+      text-decoration: none !important;
+    }
+
+    .ios-color-hack2 a {
+      color: #205478 !important;
+      text-decoration: none !important;
+    }
+
+    .ios-color-hack3 a {
+      color: #8B8B8B !important;
+      text-decoration: none !important;
+    }
+
+    .a[href^=tel], a[href^=sms] {
+      text-decoration: none !important;
+      color: #606060 !important;
+      pointer-events: none !important;
+      cursor: default !important;
+    }
+
+    .mobile_link a[href^=tel], .mobile_link a[href^=sms] {
+      text-decoration: none !important;
+      color: #606060 !important;
+      pointer-events: auto !important;
+      cursor: default !important;
+    }
+
+    @media only screen and (max-width: 640px) {
+      body {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      #emailPreHeader, #emailHeader, #emailBody, #emailFooter, .flexibleContainer, .flexibleContainerCell {
+        width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .flexibleContainerBox, .flexibleContainerBox table {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .imageContent img {
+        height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .flexibleImage {
+        height: auto !important;
+        max-height: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .flexibleImageSmall {
+        height: auto !important;
+        width: auto !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .nerd_wallet_logo {
+        max-width: 107px !important;
+        max-height: 16px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .social_icon {
+        max-width: 16px !important;
+        max-height: 16px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .mobile_header_title {
+        font-size: 32px !important;
+        line-height: 34px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .mobile_header_copy {
+        line-height: 24px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      #appDownload {
+        width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .mobile_appDl_text {
+        font-size: 16px !important;
+        line-height: 25px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .templateColumnContainer {
+        display: block !important;
+        width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .columnContentCenter {
+        text-align: center !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .columnImageFull {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .threeColumnContainer {
+        display: block !important;
+        width: 100% !important;
+        max-width: 250px !important;
+        margin: 0 auto !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .threeColumnContentCenter {
+        text-align: center !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .paddingTopTen {
+        padding-top: 10px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .paddingTopThirty {
+        padding-top: 30px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .paddingZero {
+        padding-left: 0 !important;
+        padding-top: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .text_mobile_14 {
+        font-size: 14px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .text_mobile_center {
+        text-align: center !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .button_mobile_center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 210px !important;
+        margin: 0 auto !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .mobile_spacing {
+        padding-top: 30px !important;
+        padding-bottom: 0 !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      u + .body .cta_align {
+        padding-left: 17px !important;
+      }
+
+    }
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+      .email-container {
+        min-width: 375px !important;
+      }
+
+    }
+
+    html {
+      background-color: #FFFFFF;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, #bodyTable, #bodyCell, #bodyCell {
+      height: 100% !important;
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      font-family: Montserrat, Arial, sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    #bodyTable {
+      width: 100% !important;
+      margin: auto;
+      max-width: 640px !important;
+      color: #3d3d3d;
+      font-weight: normal;
+    }
+
+    img, a img {
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      height: auto;
+      line-height: 100%;
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #5F5F5F;
+      font-weight: 500;
+      font-family: Montserrat;
+      font-size: 20px;
+      line-height: 125%;
+      text-align: Left;
+      letter-spacing: normal;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 10px;
+      margin-left: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .ReadMsgBody {
+      width: 100%;
+    }
+
+    .ExternalClass {
+      width: 100%;
+    }
+
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+      line-height: 100%;
+    }
+
+    table, td {
+      mso-table-lspace: 0;
+      mso-table-rspace: 0;
+    }
+
+    #outlook a {
+      padding: 0;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      display: block;
+      outline: none;
+      text-decoration: none;
+    }
+
+    body, table, td, p, a, li, blockquote {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      font-weight: normal !important;
+    }
+
+    .ExternalClass td[class=ecxflexibleContainerBox] h3 {
+      padding-top: 10px !important;
+    }
+
+    h1 {
+      display: block;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 100%;
+    }
+
+    h2 {
+      display: block;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 120%;
+    }
+
+    h3 {
+      display: block;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 110%;
+    }
+
+    h4 {
+      display: block;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: normal;
+      line-height: 100%;
+    }
+
+    .linkRemoveBorder {
+      border-bottom: 0 !important;
+    }
+
+    .flexibleContainerCellDivider {
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    body, #bodyTable {
+      background-color: #FFFFFF;
+    }
+
+    #emailHeader {
+      background-color: #f5c732;
+    }
+
+    #emailBody {
+      background-color: #ffffff;
+    }
+
+    #emailFooter {
+      background-color: #FFFFFF;
+    }
+
+    .nestedContainer {
+      background-color: #F8F8F8;
+      border: 1px solid #CCCCCC;
+    }
+
+    .emailButton {
+      background-color: #205478;
+      border-collapse: separate;
+    }
+
+    .buttonContent {
+      color: #FFFFFF;
+      font-family: Helvetica;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 100%;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .buttonContent a {
+      color: #FFFFFF;
+      display: block;
+      text-decoration: none !important;
+      border: 0 !important;
+    }
+
+    .emailCalendar {
+      background-color: #FFFFFF;
+      border: 1px solid #CCCCCC;
+    }
+
+    .emailCalendarMonth {
+      background-color: #205478;
+      color: #FFFFFF;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    .emailCalendarDay {
+      color: #205478;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    .imageContentText {
+      margin-top: 10px;
+      line-height: 0;
+    }
+
+    .imageContentText a {
+      line-height: 0;
+    }
+
+    #invisibleIntroduction {
+      display: none !important;
+    }
+
+    .ios-color-hack a {
+      color: #3d3d3d !important;
+      text-decoration: none !important;
+    }
+
+    .ios-color-hack2 a {
+      color: #205478 !important;
+      text-decoration: none !important;
+    }
+
+    .ios-color-hack3 a {
+      color: #8B8B8B !important;
+      text-decoration: none !important;
+    }
+
+    .a[href^=tel], a[href^=sms] {
+      text-decoration: none !important;
+      color: #606060 !important;
+      pointer-events: none !important;
+      cursor: default !important;
+    }
+
+    .mobile_link a[href^=tel], .mobile_link a[href^=sms] {
+      text-decoration: none !important;
+      color: #606060 !important;
+      pointer-events: auto !important;
+      cursor: default !important;
+    }
+
+    @media only screen and (max-width: 640px) {
+      body {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      #emailPreHeader, #emailHeader, #emailBody, #emailFooter, .flexibleContainer, .flexibleContainerCell {
+        width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .flexibleContainerBox, .flexibleContainerBox table {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .imageContent img {
+        height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .flexibleImage {
+        height: auto !important;
+        max-height: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .flexibleImageSmall {
+        height: auto !important;
+        width: auto !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .nerd_wallet_logo {
+        max-width: 107px !important;
+        max-height: 16px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .social_icon {
+        max-width: 16px !important;
+        max-height: 16px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .mobile_header_title {
+        font-size: 32px !important;
+        line-height: 34px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .mobile_header_copy {
+        line-height: 24px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      #appDownload {
+        width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .mobile_appDl_text {
+        font-size: 16px !important;
+        line-height: 25px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .templateColumnContainer {
+        display: block !important;
+        width: 100% !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .columnContentCenter {
+        text-align: center !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .columnImageFull {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .threeColumnContainer {
+        display: block !important;
+        width: 100% !important;
+        max-width: 250px !important;
+        margin: 0 auto !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .threeColumnContentCenter {
+        text-align: center !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .paddingTopTen {
+        padding-top: 10px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .paddingTopThirty {
+        padding-top: 30px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .paddingZero {
+        padding-left: 0 !important;
+        padding-top: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .text_mobile_14 {
+        font-size: 14px !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .text_mobile_center {
+        text-align: center !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .button_mobile_center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 210px !important;
+        margin: 0 auto !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .mobile_spacing {
+        padding-top: 30px !important;
+        padding-bottom: 0 !important;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      u + .body .cta_align {
+        padding-left: 17px !important;
+      }
+
+    }
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+      .email-container {
+        min-width: 375px !important;
+      }
+
+    }
+
+    @media screen yahoo and (max-width:
+
+    640px
+
+    ) {
+      .cta_align {
+        padding-left: 20px !important;
+      }
+
+    }
+
+    @media screen yahoo and (max-width:
+
+    640px
+
+    ) {
+      .nerd_wallet_logo {
+        width: 107px !important;
+        height: 107px !important;
+      }
+
+    }
+
+    @media screen yahoo and (max-width:
+
+    640px
+
+    ) {
+      .social_icon {
+        width: 16px !important;
+        height: 16px !important;
+      }
+
+    }
+  </style>
+</head>
+
+<body class="body" bgcolor="#FFFFFF" leftmargin="0" marginwidth="0" topmargin="0"
+      marginheight="0" offset="0"
+      style="margin: 0;padding: 0;font-family: Montserrat,Arial,sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;height: 100% !important;width: 100% !important;font-weight: normal !important;">
+<!-- CENTER THE EMAIL // -->
+<!-- 1. The center tag should normally put all the content in the middle of the
+email page. I added "table-layout: fixed;" style to force yahoomail which by default
+put the content left. 2. For hotmail and yahoomail, the contents of the email starts
+from this center, so we try to apply necessary styling e.g. background-color. -->
+<div class="email-container">
+  <center style="background-color:#FFFFFF;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyTable"
+           style="height: 100%;max-width: 100% !important;width: 100% !important;min-width: 100% !important;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: auto;padding: 0;font-family: Montserrat,Arial,sans-serif;color: #3d3d3d;font-weight: normal !important;background-color: #FFFFFF;">
+      <tr>
+        <td align="center" valign="top" id="bodyCell"
+            style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;font-family: Montserrat,Arial,sans-serif;font-weight: normal !important;height: 100% !important;width: 100% !important;">
+          <!-- START PRE HEADER // -->
+
+          <!-- // END PRE HEADER -->
+          <!-- START HEADER -->
+          <table bgcolor="#f5c732" border="0" cellpadding="0" cellspacing="0" width="640"
+                 id="emailHeader"
+                 style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #f5c732;font-weight: normal !important;">
+            <tr>
+              <td align="center" valign="top"
+                  style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                <!-- CENTERING TABLE // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                       style="color: #3d3d3d;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                  <tr>
+                    <td align="center" valign="top"
+                        style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                      <!-- FLEXIBLE CONTAINER // -->
+                      <table border="0" cellpadding="0" cellspacing="0" width="640" class="flexibleContainer"
+                             style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                        <tr>
+                          <td align="left" valign="top" width="640" class="flexibleContainerCell"
+                              style="padding-left: 20px;padding-right: 20px;padding-top: 30px;padding-bottom: 0px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                            <!-- HEADER LOGO & SOCIAL SECTION // -->
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                   style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                              <tr>
+                                <td align="right" valign="middle"
+                                    style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                         style="max-width: 100%;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                    <tr>
+                                      <td align="left"
+                                          style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                        <a href="https://hack4tkm.in/"
+                                           target="_blank"
+                                           style="color: #fff;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-decoration: none !important;font-weight: normal !important;">
+                                          #H4TKM
+                                        </a>
+                                      </td>
+                                      <td align="right" width="320"
+                                          style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                        <!-- SOCIAL ICONS // -->
+                                        <table align="right" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               style="max-width: 100%;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                          <tr>
+                                            <td
+                                              style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;"></td>
+                                            <td width="20" align="right"
+                                                style="padding-left: 5px;padding-right: 5px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                              <a href="https://www.linkedin.com/company/iedc-tkmce" target="_blank"
+                                                 style="text-decoration: none;color: #3d3d3d;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                                <img class="social_icon"
+                                                     style="display: block;max-width: 20px;max-height: 20px;width: 100%;border: 0;outline: none;text-decoration: none;height: auto;line-height: 100%;-ms-interpolation-mode: bicubic;"
+                                                     src="https://avatars.githubusercontent.com/u/357098?s=200&v=4"
+                                                     width="20" alt="facebook_20wt.png">
+                                              </a>
+                                            </td>
+                                            <td width="20" align="right"
+                                                style="padding-left: 5px;padding-right: 5px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                              <a href="https://www.instagram.com/hack4tkm/" target="_blank"
+                                                 style="text-decoration: none;color: #3d3d3d;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                                <img class="social_icon"
+                                                     style="display: block;max-width: 20px;max-height: 20px;width: 100%;border: 0;outline: none;text-decoration: none;height: auto;line-height: 100%;-ms-interpolation-mode: bicubic;"
+                                                     src="http://cdn.nerdwallet.com/email/final/instagram_20wt.png"
+                                                     width="20" alt="instagram_20wt.png">
+                                              </a>
+                                            </td>
+
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2" height="32"
+                                          style="height: 32px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <!-- END HEADER LOGO & SOCIAL SECTION -->
+                            <!-- MAIN CONTENT -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                   style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                              <tr>
+                                <td mc:edit="header_sub_heading" align="center" valign="top" class="textContent"
+                                    style="color: #FFFFFF;line-height: 20px;font-family: Montserrat, Arial, sans-serif;font-size: 13px;font-weight: 500 !important;margin-bottom: 5px;text-align: center;text-transform: uppercase;letter-spacing: 1px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                  WELCOME ABOARD , {{ data.name }}
+                                </td>
+                              </tr>
+                              <tr>
+                                <td mc:edit="header_main_heading" class="mobile_header_title" align="center"
+                                    valign="top"
+                                    style="color: #FFFFFF;line-height: 43px;font-family: Montserrat, Tahoma, Arial;font-size: 36px;font-weight: 800 !important;margin-bottom: 5px;text-align: center;letter-spacing: 1px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                  {{ data.team_name }}
+                              </tr>
+                              <tr>
+                                <td mc:edit="header_main_copy" align="center" valign="top" class="mobile_header_copy"
+                                    style="color: #FFFFFF;line-height: 20px;font-family: Montserrat, Arial, sans-serif;font-size: 16px;font-weight: 400 !important;margin-bottom: 5px;text-align: center;padding-top: 20px;padding-bottom: 10px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                  You’re braver than you believe,<br/> stronger than you seem, <br/>and smarter than you
+                                  think.
+                                </td>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center"
+                                    style="padding-left: 20px;padding-right: 20px;padding-top: 20px;padding-bottom: 30px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                  <!-- Button -->
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                         style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                    <tr>
+                                      <td align="center"
+                                          style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                        <table class="green_button" border="0" cellspacing="0" cellpadding="0"
+                                               style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                          <tr>
+                                            <td mc:edit="header_button" align="center" height="35"
+                                                style="-webkit-border-radius: 5px;border-radius: 5px;line-height: 24px;height: 35px !important;white-space: nowrap !important;font-family: Montserrat, Arial, sans-serif;color: #8ccb32 !important;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;"
+                                                bgcolor="#70be52">
+                                              <a href="https://hack4tkm.in/"
+                                                 target="_blank"
+                                                 style="font-size: 16px;font-weight: 500 !important;font-family: Montserrat, Arial, sans-serif;color: #FFFFFF;text-decoration: none;-webkit-border-radius: 5px;border-radius: 5px;padding-top: 5px;padding-bottom: 5px;padding-right: 30px;padding-left: 30px;border: 1px solid #70be52;display: inline-block;white-space: nowrap;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Join
+                                                Us</a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <!-- END MAIN CONTENT -->
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- // FLEXIBLE CONTAINER -->
+                    </td>
+                  </tr>
+                </table>
+                <!-- // CENTERING TABLE -->
+              </td>
+            </tr>
+            <!-- FULL WIDHT IMAGE // -->
+            <tr>
+              <td align="center" valign="top"
+                  style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                <!-- CENTERING TABLE // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                       style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                  <tr>
+                    <td align="center" valign="top"
+                        style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                      <!-- FLEXIBLE CONTAINER // -->
+                      <table border="0" cellpadding="0" cellspacing="0" width="640" class="flexibleContainer"
+                             style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                        <tr>
+                          <td align="center" valign="top" width="640" class="flexibleContainerCell"
+                              style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                            <!-- CONTENT TABLE // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                   style="min-width: 100% !important;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                              <tr>
+                                <td valign="top" class="imageContent"
+                                    style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                  <a
+                                    href="/home/signin?flow=credit-score&redirect_uri=%2Fhome%2Fdashboard%2Fhome%3F&utm_campaign=ipx_mktg_072817_onboarding_1&utm_content=hero_image&utm_medium=eml&utm_source=mc&utm_term=ipx_onboarding_072817"
+                                    target="_blank"
+                                    style="color: #3dbed8;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-decoration: none !important;font-weight: normal !important;">
+                                    <img src="https://i.imgur.com/1nXrmqj.jpg"
+                                         width="640" class="flexibleImage"
+                                         style="max-width: 640px;width: 100%;min-width: 100%!important;display: block;border: 0;outline: none;text-decoration: none;height: auto;line-height: 100%;-ms-interpolation-mode: bicubic;"
+                                         alt="Text" title="Text">
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                            <!-- // CONTENT TABLE -->
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- // FLEXIBLE CONTAINER -->
+                    </td>
+                  </tr>
+                </table>
+                <!-- // CENTERING TABLE -->
+              </td>
+            </tr>
+            <!-- // END FULL WIDTH IMAGE -->
+          </table>
+          <!-- // END HEADER -->
+          <!-- EMAIL BODY // -->
+
+          <!-- // END EMAIL BODY -->
+          <!-- EMAIL FOOTER // -->
+          <!-- The table "emailBody" is the email's container. Its width can be set to 100%
+          for a color band that spans the width of the page. -->
+          <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="640"
+                 id="emailFooter"
+                 style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;font-weight: normal !important;">
+            <!-- DOWNLOAD APP ROW // -->
+            <tr>
+              <td align="center" valign="top"
+                  style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                <!-- CENTERING TABLE // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                       style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                  <tr>
+                    <td align="center" valign="top"
+                        style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                      <!-- FLEXIBLE CONTAINER // -->
+                      <!-- // FLEXIBLE CONTAINER -->
+                    </td>
+                  </tr>
+                </table>
+                <!-- // CENTERING TABLE -->
+              </td>
+            </tr>
+            <!-- END DOWNLOAD APP ROW -->
+            <!-- FOOTER ROW // -->
+            <tr>
+              <td align="center" valign="top"
+                  style="padding-left: 20px;padding-right: 20px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                <!-- CENTERING TABLE // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                       style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                  <tr>
+                    <td align="center" valign="top"
+                        style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                      <!-- FLEXIBLE CONTAINER // -->
+                      <table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer"
+                             style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                        <tr>
+                          <td align="center" valign="top" width="500" class="flexibleContainerCell"
+                              style="mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                   style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                              <tr>
+
+                              </tr>
+                              <tr>
+                                <td valign="top" bgcolor="#FFFFFF"
+                                    style="padding-top: 10px;padding-bottom: 10px;mso-table-lspace: 0;mso-table-rspace: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal !important;">
+                                  <div
+                                    style="font-family:Montserrat, Arial, sans-serif;font-size:12px;color:#3d3d3d;text-align:center;line-height:20px;">
+                                    <span class="ios-color-hack">Discord Link will be mailed soon <br> IEDC TKMCE | TKM College of Engineering | Kollam</span>
+
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- // FLEXIBLE CONTAINER -->
+                    </td>
+                  </tr>
+                </table>
+                <!-- // CENTERING TABLE -->
+              </td>
+            </tr>
+            <!-- END FOOTER ROW -->
+          </table>
+          <!-- // END -->
+        </td>
+      </tr>
+    </table>
+  </center>
+</div>
 {#<img src="http://nerdwallet.us2.list-manage.com/track/open.php?u=1652dfa4e08f8de517dba89ea&id=6e2fb32b6f&e=7dd34ea0f6"#}
 {#     height="1" width="1">#}
-{#</body>#}
-{##}
-{#</html>#}
+</body>
 
+</html>
 
-Trial
