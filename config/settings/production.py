@@ -94,6 +94,7 @@ EMAIL_SUBJECT_PREFIX = env(
     default="[Hackathon]",
 )
 
+
 # ADMIN
 # ------------------------------------------------------------------------------
 # Django Admin URL regex.
@@ -108,6 +109,17 @@ INSTALLED_APPS += ["anymail"]  # noqa F405
 # https://anymail.readthedocs.io/en/stable/esps
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 ANYMAIL = {}
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+
+EMAIL_TIMEOUT = None
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+EMAIL_HOST_USER = env("EMAIL_USERNAME")
+EMAIL_HOST_PASSWORD = env("EMAIL_PASSWORD")
+
 
 
 # LOGGING
