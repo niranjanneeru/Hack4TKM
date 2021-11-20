@@ -1,4 +1,3 @@
-import hmac
 from typing import Any
 
 import razorpay
@@ -127,19 +126,30 @@ class PaymentConfirmationView(CreateAPIView):
             client = razorpay.Client(auth=(settings.RAZORPAY_KEY_ID, settings.RAZORPAY_KEY_SECRET))
             client.set_app_details({"title": "Hack4TKM", "version": "v1"})
             payments = client.order.payments(order_id)
-            for payment in payments:
-                generated_signature = hmac.new(settings.RAZORPAY_KEY_SECRET, order_id + "|" + payment_id)
-                if payment['id'] == payment_id and generated_signature == serializer.validated_data['signature']:
-                    if payment["status"] == "captured":
-                        obj.payment_id = payment_id
-                        obj.has_paid = True
-                        obj.signature = generated_signature
-                        obj.save()
-                        # send_email(obj)
-                        return Response({'detail': 'Payment Successful'}, status.HTTP_201_CREATED)
-                    else:
-                        return Response({"detail": "Unsuccessful Payment Payment Hashes Mismatch"},
-                                        status=status.HTTP_402_PAYMENT_REQUIRED)
+            print(type(payments))
+            print()
+            print()
+            print()
+            for payment in payments['items']:
+                params_dict = {
+                    'razorpay_order_id': order_id,
+                    'razorpay_payment_id': payment_id,
+                    'razorpay_signature': serializer.validated_data['signature']
+                }
+
+                result = client.utility.verify_payment_signature(params_dict)
+                print(result)
+                print(payment)
+                if result is None and payment["status"] == "captured":
+                    obj.payment_id = payment_id
+                    obj.has_paid = True
+                    obj.signature = serializer.validated_data['signature']
+                    obj.save()
+                    # send_email(obj)
+                    return Response({'detail': 'Payment Successful'}, status.HTTP_201_CREATED)
+                else:
+                    return Response({"detail": "Unsuccessful Payment Payment Hashes Mismatch"},
+                                    status=status.HTTP_402_PAYMENT_REQUIRED)
             else:
                 return Response({'detail': "Payment Not Recorded"}, status.HTTP_400_BAD_REQUEST)
 

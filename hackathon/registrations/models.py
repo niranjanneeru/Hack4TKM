@@ -66,6 +66,8 @@ class Sponsors(models.Model):
 
     class Meta:
         ordering = ['order', ]
+        verbose_name_plural = "Sponsors"
+        verbose_name = "Sponsor"
 
 
 class FAQ(models.Model):
@@ -78,3 +80,5 @@ class FAQ(models.Model):
 
     class Meta:
         ordering = ['order', ]
+        verbose_name_plural = "FAQs"
+        verbose_name = "FAQ"
