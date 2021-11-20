@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.core.mail import EmailMessage
 from django.template.loader import get_template
 
@@ -19,8 +20,9 @@ def send_email(payment: Payment):
     email = EmailMessage(
         subject="Hack4TKM",
         body=message,
-        from_email="noreply@tkmce.ac.in",
+        from_email=settings.EMAIL_HOST_USER,
         to=mail_ids
     )
     email.content_subtype = "html"
-    email.send()
+    # print(mail_ids)
+    return email.send()
