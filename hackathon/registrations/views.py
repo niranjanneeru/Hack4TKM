@@ -11,7 +11,7 @@ from rest_framework.response import Response
 from .models import Registrations, Payment, TeamMember, FAQ, Sponsors
 from .serializers import RegSerializer, MobileSerializer, TeamMemberSerializer, PaymentConfirmationSerializer, \
     FAQSerializer, SponsorSerializer, ProfileSerializer, TeamNameSerializer
-from .utils import amount, send_email
+from .utils import amount
 
 
 class RegisterView(CreateAPIView):
@@ -40,9 +40,13 @@ class PhoneNumberView(CreateAPIView):
                 'team': RegSerializer(team).data,
                 'members': TeamMemberSerializer(team.team, many=True).data,
             }
-            if transaction.has_paid:
-                data['detail'] = 'This Number has Registered as Team Leader and has Paid for the event'
-                return Response(data, status.HTTP_200_OK)
+            if transaction:
+                if transaction.has_paid:
+                    data['detail'] = 'This Number has Registered as Team Leader and has Paid for the event'
+                    return Response(data, status.HTTP_200_OK)
+                else:
+                    data['detail'] = 'Registered as Team Leader Payment Incomplete'
+                    return Response(data, status.HTTP_206_PARTIAL_CONTENT)
             else:
                 data['detail'] = 'Registered as Team Leader Payment Incomplete'
                 return Response(data, status.HTTP_206_PARTIAL_CONTENT)
@@ -54,9 +58,13 @@ class PhoneNumberView(CreateAPIView):
                 'team': RegSerializer(team).data,
                 'members': TeamMemberSerializer(team.team, many=True).data
             }
-            if transaction.has_paid:
-                data['detail'] = 'This Number has Registered and has Paid for the event'
-                return Response(data, status.HTTP_200_OK)
+            if transaction:
+                if transaction.has_paid:
+                    data['detail'] = 'This Number has Registered and has Paid for the event'
+                    return Response(data, status.HTTP_200_OK)
+                else:
+                    data['detail'] = 'Registered as Team Leader Payment Incomplete'
+                    return Response(data, status.HTTP_206_PARTIAL_CONTENT)
             else:
                 data['detail'] = 'Registered as Team Leader Payment Incomplete'
                 return Response(data, status.HTTP_206_PARTIAL_CONTENT)
