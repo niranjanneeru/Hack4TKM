@@ -12,6 +12,10 @@ class Registrations(models.Model):
     college_name = models.CharField(max_length=50)
     date = models.DateTimeField(auto_now=True)
     team_members = models.PositiveSmallIntegerField(null=True, blank=True, default=1)
+    address = models.TextField()
+    district = models.CharField(max_length=50)
+    state = models.CharField(max_length=50)
+    pincode = models.IntegerField()
 
     def __str__(self):
         return f"{self.team_name}: {self.name}"
@@ -29,6 +33,10 @@ class TeamMember(models.Model):
     phone_no = PhoneNumberField(_("Phone Number"), unique=True)
     college_name = models.CharField(max_length=50)
     date = models.DateTimeField(auto_now=True)
+    address = models.TextField()
+    district = models.CharField(max_length=50)
+    state = models.CharField(max_length=50)
+    pincode = models.IntegerField()
 
     def __str__(self):
         return f"{self.team.team_name}: {self.name}"
