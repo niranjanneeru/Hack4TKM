@@ -1,3 +1,4 @@
+import logging
 from typing import Any
 
 import razorpay
@@ -11,6 +12,8 @@ from .models import Registrations, Payment, TeamMember, FAQ, Sponsors
 from .serializers import RegSerializer, MobileSerializer, TeamMemberSerializer, PaymentConfirmationSerializer, \
     FAQSerializer, SponsorSerializer, ProfileSerializer, TeamNameSerializer
 from .utils import amount, send_email
+
+logger = logging.getLogger(__name__)
 
 
 class RegisterView(CreateAPIView):
@@ -141,8 +144,8 @@ class PaymentConfirmationView(CreateAPIView):
                     obj.save()
                     try:
                         send_email(obj)
-                    except:
-                        pass
+                    except Exception as e:
+                        logger.warning(e)
                     return Response({'detail': 'Payment Successful'}, status.HTTP_201_CREATED)
                 else:
                     return Response({"detail": "Unsuccessful Payment Payment Hashes Mismatch"},
