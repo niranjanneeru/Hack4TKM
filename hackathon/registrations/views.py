@@ -63,11 +63,11 @@ class PhoneNumberView(CreateAPIView):
                     data['detail'] = 'This Number has Registered and has Paid for the event'
                     return Response(data, status.HTTP_200_OK)
                 else:
-                    data['detail'] = 'Registered as Team Leader Payment Incomplete'
-                    return Response(data, status.HTTP_206_PARTIAL_CONTENT)
+                    data['detail'] = 'This Number has Registered Payment Incomplete'
+                    return Response(data, status.HTTP_208_ALREADY_REPORTED)
             else:
-                data['detail'] = 'Registered as Team Leader Payment Incomplete'
-                return Response(data, status.HTTP_206_PARTIAL_CONTENT)
+                data['detail'] = 'This Number has Registered Payment Incomplete'
+                return Response(data, status.HTTP_208_ALREADY_REPORTED)
         return Response({'detail': 'Registration Pending'}, status.HTTP_204_NO_CONTENT)
 
 
