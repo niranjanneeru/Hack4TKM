@@ -1,4 +1,5 @@
 import nested_admin
+from csvexport.actions import csvexport
 from django.contrib import admin
 
 from .models import TeamMember, Registrations, Payment, FAQ, Sponsors
@@ -25,4 +26,5 @@ class RegistrationAdmin(nested_admin.NestedModelAdmin):
     search_fields = ['name', 'team__name', 'discord_id', 'team__discord_id', 'email_id', 'team__email_id', 'phone_no',
                      'team__phone_no', 'team_name', 'college_name', 'team__college_name']
     list_per_page = 50
+    actions = [csvexport, ]
     inlines = [TeamMemberNestedAdmin, PaymentNestedAdmin]

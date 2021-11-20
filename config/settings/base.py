@@ -75,6 +75,7 @@ THIRD_PARTY_APPS = [
     "drf_yasg",
     "nested_admin",
     "django_filters",
+    "csvexport",
 ]
 
 LOCAL_APPS = [
