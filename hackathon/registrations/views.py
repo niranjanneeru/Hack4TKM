@@ -142,7 +142,7 @@ class PaymentConfirmationView(CreateAPIView):
                     try:
                         send_email(obj)
                     except:
-                        continue
+                        pass
                     return Response({'detail': 'Payment Successful'}, status.HTTP_201_CREATED)
                 else:
                     return Response({"detail": "Unsuccessful Payment Payment Hashes Mismatch"},
