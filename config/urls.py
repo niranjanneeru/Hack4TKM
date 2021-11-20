@@ -4,6 +4,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
+from django.views.generic import TemplateView
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
@@ -26,9 +27,7 @@ urlpatterns = [
                   path("register/", include("hackathon.registrations.urls")),
                   path("blog/", include("hackathon.blog.urls")),
                   path("data/", include("hackathon.registrations.data_urls")),
-                  # path(
-                  #     "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
-                  # ),
+                  path("admin/", TemplateView.as_view(template_name="pages/home.html"), name="home"),
                   # Django Admin, use {% url 'admin:index' %}
                   url(r'^_nested_admin/', include('nested_admin.urls')),
                   path(settings.ADMIN_URL, admin.site.urls),
