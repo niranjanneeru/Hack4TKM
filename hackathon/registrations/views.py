@@ -104,7 +104,10 @@ class PaymentRequest(CreateAPIView):
             Payment.objects.create(team=team, id=payment['id'], amount=payment['amount'])
         payment['RAZORPAY_KEY_ID'] = settings.RAZORPAY_KEY_ID
         payment['call_back_url'] = 'https://api.hack4tkm.in/register/confirm/'
-        return Response({'payment': payment}, status.HTTP_201_CREATED)
+
+        return Response({'payment': payment, 'team': RegSerializer(team).data,
+                         'members': TeamMemberSerializer(team.team.all(), many=True).data},
+                        status.HTTP_201_CREATED)
 
 
 payment_request = PaymentRequest.as_view()
