@@ -283,7 +283,7 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
     ),
-    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.AllowAny",),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAdminUser",),
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
 
@@ -297,3 +297,13 @@ RAZORPAY_KEY_ID = env("RAZORPAY_KEY_ID")
 RAZORPAY_KEY_SECRET = env("RAZORPAY_KEY_SECRET")
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+
+EMAIL_TIMEOUT = None
+EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
+
+EMAIL_HOST_USER = env("EMAIL_USERNAME")
+EMAIL_HOST_PASSWORD = env("EMAIL_PASSWORD")

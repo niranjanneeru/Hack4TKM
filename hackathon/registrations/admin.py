@@ -1,9 +1,11 @@
 import nested_admin
 from django.contrib import admin
 
-from .models import TeamMember, Registrations, Payment
+from .models import TeamMember, Registrations, Payment, FAQ, Sponsors
 
 admin.site.register(Payment)
+admin.site.register(FAQ)
+admin.site.register(Sponsors)
 
 
 class TeamMemberNestedAdmin(nested_admin.NestedStackedInline):

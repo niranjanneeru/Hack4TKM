@@ -1,7 +1,7 @@
 from phonenumber_field.serializerfields import PhoneNumberField
-from rest_framework.serializers import ModelSerializer, Serializer, CharField
+from rest_framework.serializers import ModelSerializer, Serializer, CharField, EmailField, IntegerField
 
-from .models import Registrations, TeamMember
+from .models import Registrations, TeamMember, FAQ, Sponsors
 
 
 class TeamMemberSerializer(ModelSerializer):
@@ -50,3 +50,32 @@ class PaymentConfirmationSerializer(Serializer):
     payment_id = CharField(max_length=50)
     order_id = CharField(max_length=50)
     signature = CharField(max_length=500)
+
+
+class FAQSerializer(ModelSerializer):
+    class Meta:
+        model = FAQ
+        fields = '__all__'
+
+
+class SponsorSerializer(ModelSerializer):
+    class Meta:
+        model = Sponsors
+        fields = '__all__'
+
+
+class ProfileSerializer(Serializer):
+    name = CharField(max_length=50)
+    discord_id = CharField(max_length=30)
+    email_id = EmailField(max_length=100)
+    phone_no = PhoneNumberField()
+    college_name = CharField(max_length=50)
+    team_members = IntegerField(default=1)
+    address = CharField(max_length=1000)
+    district = CharField(max_length=50)
+    state = CharField(max_length=50)
+    pincode = IntegerField()
+
+
+class TeamNameSerializer(Serializer):
+    team_name = CharField(max_length=30)

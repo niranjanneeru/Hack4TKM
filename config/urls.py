@@ -25,6 +25,7 @@ urlpatterns = [
                   path("", schema_view.with_ui('redoc', cache_timeout=0), name='docs'),
                   path("register/", include("hackathon.registrations.urls")),
                   path("blog/", include("hackathon.blog.urls")),
+                  path("data/", include("hackathon.registrations.data_urls")),
                   # path(
                   #     "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
                   # ),

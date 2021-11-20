@@ -53,3 +53,28 @@ class Payment(models.Model):
 
     def __str__(self):
         return self.team.team_name
+
+
+class Sponsors(models.Model):
+    image_link = models.URLField(max_length=500)
+    link = models.URLField(max_length=500)
+    name = models.CharField(max_length=100)
+    order = models.IntegerField(unique=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['order', ]
+
+
+class FAQ(models.Model):
+    ques = models.CharField(max_length=500)
+    ans = models.CharField(max_length=500)
+    order = models.IntegerField(unique=True)
+
+    def __str__(self):
+        return str(self.order)
+
+    class Meta:
+        ordering = ['order', ]

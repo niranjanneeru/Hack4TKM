@@ -4,13 +4,14 @@ from typing import Any
 import razorpay
 from django.conf import settings
 from rest_framework import status
-from rest_framework.generics import CreateAPIView
+from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.request import Request
 from rest_framework.response import Response
 
-from .models import Registrations, Payment, TeamMember
-from .serializers import RegSerializer, MobileSerializer, TeamMemberSerializer, PaymentConfirmationSerializer
-from .utils import amount
+from .models import Registrations, Payment, TeamMember, FAQ, Sponsors
+from .serializers import RegSerializer, MobileSerializer, TeamMemberSerializer, PaymentConfirmationSerializer, \
+    FAQSerializer, SponsorSerializer, ProfileSerializer, TeamNameSerializer
+from .utils import amount, send_email
 
 
 class RegisterView(CreateAPIView):
@@ -124,6 +125,7 @@ class PaymentConfirmationView(CreateAPIView):
                         obj.has_paid = True
                         obj.signature = generated_signature
                         obj.save()
+                        send_email(obj)
                         return Response({'detail': 'Payment Successful'}, status.HTTP_201_CREATED)
                     else:
                         return Response({"detail": "Unsuccessful Payment Payment Hashes Mismatch"},
@@ -136,3 +138,60 @@ class PaymentConfirmationView(CreateAPIView):
 
 
 payment_confirmation = PaymentConfirmationView.as_view()
+
+
+class FAQView(ListAPIView):
+    queryset = FAQ.objects.all()
+    serializer_class = FAQSerializer
+
+
+faq_view = FAQView.as_view()
+
+
+class SponsorView(ListAPIView):
+    queryset = Sponsors.objects.all()
+    serializer_class = SponsorSerializer
+
+
+sponsor_view = SponsorView.as_view()
+
+
+class DiscordView(RetrieveAPIView):
+    queryset = Registrations.objects.all()
+    lookup_field = 'discord_id'
+    serializer_class = ProfileSerializer
+
+    def retrieve(self, request: Request, *args: Any, **kwargs: Any):
+        discord_id = kwargs['discord_id']
+        team = Registrations.objects.filter(discord_id=discord_id).first()
+        if team:
+            return Response(ProfileSerializer(team).data, status.HTTP_200_OK)
+        else:
+            member = TeamMember.objects.filter(discord_id=discord_id).first()
+            if member:
+                return Response(ProfileSerializer(member).data, status.HTTP_200_OK)
+        return Response({'detail': 'Not Found'}, status.HTTP_404_NOT_FOUND)
+
+
+discord_view = DiscordView.as_view()
+
+
+class TeamNameView(RetrieveAPIView):
+    serializer_class = TeamNameSerializer
+    queryset = Registrations.objects.all()
+    lookup_field = 'discord_id'
+
+    def retrieve(self, request: Request, *args: Any, **kwargs: Any) -> Response:
+        discord_id = kwargs['discord_id']
+        team = Registrations.objects.filter(discord_id=discord_id).first()
+        if team:
+            return Response(TeamNameSerializer(team).data, status.HTTP_200_OK)
+        else:
+            member: TeamMember = TeamMember.objects.filter(discord_id=discord_id).first()
+            if member:
+                team = member.team
+                return Response(TeamNameSerializer(team).data, status.HTTP_200_OK)
+        return Response({'detail': 'Not Found'}, status.HTTP_404_NOT_FOUND)
+
+
+team_name = TeamNameView.as_view()
