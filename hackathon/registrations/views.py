@@ -142,10 +142,11 @@ class PaymentConfirmationView(CreateAPIView):
                     obj.has_paid = True
                     obj.signature = serializer.validated_data['signature']
                     obj.save()
-                    try:
-                        send_email(obj)
-                    except Exception as e:
-                        logger.warning(e)
+                    send_email(obj)
+                    # try:
+                    #
+                    # except Exception as e:
+                    #     logger.warning(e)
                     return Response({'detail': 'Payment Successful'}, status.HTTP_201_CREATED)
                 else:
                     return Response({"detail": "Unsuccessful Payment Payment Hashes Mismatch"},
