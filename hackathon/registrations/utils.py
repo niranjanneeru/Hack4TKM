@@ -8,7 +8,7 @@ from hackathon.registrations.models import Registrations, Payment
 def amount(team: Registrations):
     team.team_members = len(team.team.all()) + 1
     team.save()
-    return team.team_members * 300 * 100
+    return team.team_members * settings.AMOUNT * 100
 
 
 def send_email(payment: Payment):
