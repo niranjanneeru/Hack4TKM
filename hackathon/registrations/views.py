@@ -223,8 +223,8 @@ class TopperView(ListAPIView):
 
     def get_queryset(self):
         if self.queryset:
-           return self.queryset
-        return Response({},status.HTTP_204_NO_CONTENT)
+            return self.queryset
+        return Response({"Result": "To Be Decided"}, status.HTTP_204_NO_CONTENT)
 
 
 topper_view = TopperView.as_view()
@@ -233,6 +233,11 @@ topper_view = TopperView.as_view()
 class WinnerView(ListAPIView):
     queryset = Winner.objects.all()
     serializer_class = WinnerSerializer
+
+    def get_queryset(self):
+        if self.queryset:
+            return self.queryset
+        return Response({"Result": "To Be Decided"}, status.HTTP_204_NO_CONTENT)
 
 
 winner_view = WinnerView.as_view()
