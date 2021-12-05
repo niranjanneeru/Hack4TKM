@@ -1,7 +1,7 @@
 from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework.serializers import ModelSerializer, Serializer, CharField, EmailField, IntegerField
 
-from .models import Registrations, TeamMember, FAQ, Sponsors
+from .models import Registrations, TeamMember, FAQ, Sponsors, Top, Winner
 
 
 class TeamMemberSerializer(ModelSerializer):
@@ -79,3 +79,15 @@ class ProfileSerializer(Serializer):
 
 class TeamNameSerializer(Serializer):
     team_name = CharField(max_length=30)
+
+
+class TopperSerializer(ModelSerializer):
+    class Meta:
+        model = Top
+        fields = '__all__'
+
+
+class WinnerSerializer(ModelSerializer):
+    class Meta:
+        model = Winner
+        fields = '__all__'

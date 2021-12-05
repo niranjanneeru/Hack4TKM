@@ -8,9 +8,9 @@ from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.request import Request
 from rest_framework.response import Response
 
-from .models import Registrations, Payment, TeamMember, FAQ, Sponsors
+from .models import Registrations, Payment, TeamMember, FAQ, Sponsors, Top, Winner
 from .serializers import RegSerializer, MobileSerializer, TeamMemberSerializer, PaymentConfirmationSerializer, \
-    FAQSerializer, SponsorSerializer, ProfileSerializer, TeamNameSerializer
+    FAQSerializer, SponsorSerializer, ProfileSerializer, TeamNameSerializer, TopperSerializer, WinnerSerializer
 from .utils import amount, send_email
 
 logger = logging.getLogger(__name__)
@@ -215,3 +215,24 @@ class TeamNameView(RetrieveAPIView):
 
 
 team_name = TeamNameView.as_view()
+
+
+class TopperView(ListAPIView):
+    queryset = Top.objects.all()
+    serializer_class = TopperSerializer
+
+    def get_queryset(self):
+        if self.queryset:
+           return self.queryset
+        return Response({},status.HTTP_204_NO_CONTENT)
+
+
+topper_view = TopperView.as_view()
+
+
+class WinnerView(ListAPIView):
+    queryset = Winner.objects.all()
+    serializer_class = WinnerSerializer
+
+
+winner_view = WinnerView.as_view()

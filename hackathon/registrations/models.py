@@ -82,3 +82,23 @@ class FAQ(models.Model):
         ordering = ['order', ]
         verbose_name_plural = "FAQs"
         verbose_name = "FAQ"
+
+
+class Top(models.Model):
+    position = models.IntegerField(unique=True)
+    team = models.OneToOneField(Registrations, on_delete=models.SET_NULL, null=True, blank=True)
+
+    def __str__(self):
+        return self.team.team_name
+
+    class Meta:
+        ordering = ['position', ]
+        verbose_name_plural = "Toppers"
+        verbose_name = "Topper"
+
+
+class Winner(models.Model):
+    team = models.OneToOneField(Registrations, on_delete=models.SET_NULL, null=True, blank=True)
+
+    def __str__(self):
+        return self.team.team_name
