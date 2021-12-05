@@ -10,6 +10,8 @@ from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 from rest_framework.authtoken.views import obtain_auth_token
 
+from hackathon.registrations.views import topper_view, winner_view
+
 schema_view = get_schema_view(
     openapi.Info(
         title="Hackathon API",
@@ -34,6 +36,8 @@ urlpatterns = [
                   # User management
                   path("users/", include("hackathon.users.urls", namespace="users")),
                   path("accounts/", include("allauth.urls")),
+                  path('top/', topper_view),
+                  path('winner/', winner_view)
                   # Your stuff: custom urls includes go here
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
