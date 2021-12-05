@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.db.models import QuerySet
 from django.http import HttpResponse
 
-from .models import TeamMember, Registrations, Payment, FAQ, Sponsors
+from .models import TeamMember, Registrations, Payment, FAQ, Sponsors, Top, Winner
 
 admin.site.register(Payment)
 admin.site.register(FAQ)
@@ -65,3 +65,7 @@ class RegistrationAdmin(nested_admin.NestedModelAdmin, ExportCSVMixin):
             if obj[0].has_paid:
                 return "Yes"
         return "No"
+
+
+admin.site.register(Top)
+admin.site.register(Winner)
