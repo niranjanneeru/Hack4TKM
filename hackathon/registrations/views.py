@@ -240,7 +240,7 @@ class WinnerView(ListAPIView):
     def list(self, request: Request, *args: Any, **kwargs: Any) -> Response:
         resp = self.get_queryset()
         if resp:
-            ser = WinnerSerializer(data=resp[0])
+            ser = WinnerSerializer(data=resp, many=True)
             ser.is_valid()
             return Response(ser.data, status.HTTP_200_OK)
             return Response(resp, status.HTTP_200_OK)
