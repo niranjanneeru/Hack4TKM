@@ -1,5 +1,6 @@
 from phonenumber_field.serializerfields import PhoneNumberField
-from rest_framework.serializers import ModelSerializer, Serializer, CharField, EmailField, IntegerField
+from rest_framework.serializers import ModelSerializer, Serializer, CharField, EmailField, IntegerField, \
+    SerializerMethodField
 
 from .models import Registrations, TeamMember, FAQ, Sponsors, Top, Winner
 
@@ -82,12 +83,36 @@ class TeamNameSerializer(Serializer):
 
 
 class TopperSerializer(ModelSerializer):
+    team = SerializerMethodField('get_team')
+    members = SerializerMethodField('get_members')
+
+    def get_team(self, obj: Top):
+        return obj.team.team_name
+
+    def get_members(self, obj: Top):
+        res = [{'name': obj.team.name, 'college': obj.team.college_name}]
+        for i in obj.team.team.all():
+            res.append({'name': i.name, 'college': i.college_name})
+        return res
+
     class Meta:
         model = Top
         fields = '__all__'
 
 
 class WinnerSerializer(ModelSerializer):
+    team = SerializerMethodField('get_team')
+    members = SerializerMethodField('get_members')
+
+    def get_team(self, obj: Top):
+        return obj.team.team_name
+
+    def get_members(self, obj: Top):
+        res = [{'name': obj.team.name, 'college': obj.team.college_name}]
+        for i in obj.team.team.all():
+            res.append({'name': i.name, 'college': i.college_name})
+        return res
+
     class Meta:
         model = Winner
         fields = '__all__'

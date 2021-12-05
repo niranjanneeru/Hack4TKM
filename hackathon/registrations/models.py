@@ -92,13 +92,17 @@ class Top(models.Model):
         return self.team.team_name
 
     class Meta:
-        ordering = ['position', ]
+        ordering = ['team__team_name', ]
         verbose_name_plural = "Toppers"
         verbose_name = "Topper"
 
 
 class Winner(models.Model):
+    position = models.IntegerField(unique=True, primary_key=True)
     team = models.OneToOneField(Registrations, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
         return self.team.team_name
+
+    class Meta:
+        ordering = ['position', ]
